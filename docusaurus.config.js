@@ -119,13 +119,11 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl:
-            'https://github.com/justjavac/recoil/tree/master/docs',
+          editUrl: 'https://github.com/justjavac/recoil/tree/master/docs',
         },
         blog: {
           showReadingTime: true,
-          editUrl:
-            'https://github.com/justjavac/recoil/tree/master/docs/blog/',
+          editUrl: 'https://github.com/justjavac/recoil/tree/master/docs/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
