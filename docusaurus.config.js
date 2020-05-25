@@ -9,7 +9,7 @@
 
 module.exports = {
   title: 'Recoil 中文文档',
-  tagline: 'A state management library for React',
+  tagline: '用于 React 的状态管理库',
   url: 'https://recoil.js.cn',
   organizationName: 'justjavac',
   projectName: 'recoil',
