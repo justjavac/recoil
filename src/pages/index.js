@@ -110,7 +110,7 @@ function Home() {
                   <iframe
                     width="560"
                     height="315"
-                    title="no title"
+                    title="Recoil: State Management for Today's React"
                     src="https://www.youtube-nocookie.com/embed/_ISAA_Jt9kI"
                     frameBorder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
