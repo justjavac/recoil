@@ -1,0 +1,30 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm i -g yarn
+    - run: yarn install --frozen-lockfile
+    - run: yarn ci
+    - run: yarn build
+
+    - name: Deploy
+      if: github.ref == 'refs/heads/master' && github.event_name == 'push' && github.repository == 'justjavac/recoil'
+      run: yarn deploy
+      env:
+        GIT_USER: justjavac
