@@ -1,6 +1,6 @@
 # Recoil 中文文档
 
-Recoil 中文文档使用 [Docusaurus 2](https://v2.docusaurus.io/) 构建，一个基于 React 的静态网站生成工具。
+当前翻译版本 [e377043 2020-05-25T10:09:16Z](https://github.com/facebookexperimental/Recoil/commit/e37704379e13c11c4ed4afed8da553157e3aae96)
 
 ### 安装
 
