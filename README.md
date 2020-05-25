@@ -1,6 +1,6 @@
 # Recoil 中文文档
 
-当前翻译版本 [e377043 2020-05-25T10:09:16Z](https://github.com/facebookexperimental/Recoil/commit/e37704379e13c11c4ed4afed8da553157e3aae96)
+当前翻译版本 [e377043](https://github.com/facebookexperimental/Recoil/commit/e37704379e13c11c4ed4afed8da553157e3aae96)(2020-05-25T10:09:16Z)
 
 ### 安装
 
