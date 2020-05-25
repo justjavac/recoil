@@ -8,20 +8,17 @@
  */
 
 module.exports = {
-  title: 'Recoil',
+  title: 'Recoil 中文文档',
   tagline: 'A state management library for React',
   url: 'https://recoil.js.cn',
+  organizationName: 'justjavac',
+  projectName: 'recoil',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
-  organizationName: 'justjavac', // Usually your GitHub org/user name.
-  projectName: 'recoil', // Usually your repo name.
   themeConfig: {
     algolia: {
       apiKey: '9c5a009951e793525603922b8ca66628',
       indexName: 'recoiljs',
-    },
-    googleAnalytics: {
-      trackingID: 'UA-166885839-1',
     },
     image: 'img/og-image.png',
     navbar: {
@@ -36,7 +33,7 @@ module.exports = {
         // {to: 'blog', label: 'Blog', position: 'left'},
         // Please keep GitHub link to the right for consistency.
         {
-          href: 'https://github.com/facebookexperimental/Recoil',
+          href: 'https://github.com/justjavac/recoil',
           label: 'GitHub',
           position: 'right',
         },
@@ -84,7 +81,7 @@ module.exports = {
             // },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebookexperimental/Recoil',
+              href: 'https://github.com/justjavac/recoil',
             },
           ],
         },
@@ -123,12 +120,12 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/facebookexperimental/Recoil/edit/docs/docs/',
+            'https://github.com/justjavac/recoil/tree/master/docs',
         },
         blog: {
           showReadingTime: true,
           editUrl:
-            'https://github.com/facebookexperimental/Recoil/edit/docs/docs/blog/',
+            'https://github.com/justjavac/recoil/tree/master/docs/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -136,5 +133,4 @@ module.exports = {
       },
     ],
   ],
-  plugins: ['@docusaurus/plugin-google-analytics'],
 };
