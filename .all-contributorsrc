@@ -4,6 +4,8 @@
   ],
   "imageSize": 100,
   "commit": false,
+  "badgeTemplate": "[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#贡献者)",
+  "contributorTemplate": "<a href=\"https://github.com/<%= contributor.login %>\" target=\"_blank\"><img src=\"<%= contributor.avatar_url %>\" width=\"<%= options.imageSize %>px;\" alt=\"\"/><br /><b><%= contributor.name %>(@<%= contributor.login %>)</b></a>",
   "contributors": [
     {
       "login": "justjavac",
