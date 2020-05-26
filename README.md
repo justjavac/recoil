@@ -34,7 +34,7 @@ $ GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
 
 ### 贡献者
 
-感谢所有的贡献者们🎉
+感谢所有的贡献者们 🎉
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
