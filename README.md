@@ -14,7 +14,7 @@ $ yarn
 $ yarn start
 ```
 
-This command starts a local development server and open up a browser window. Most changes are reflected live without having to restart the server.
+这个命令会开启一个服务，并自动打开浏览器。当有文件更改时页面会自动刷新。
 
 ### 构建
 
@@ -22,7 +22,7 @@ This command starts a local development server and open up a browser window. Mos
 $ yarn build
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+这个命令会生成静态文件到 `build` 目录。
 
 ### 部署
 
@@ -30,12 +30,11 @@ This command generates static content into the `build` directory and can be serv
 $ GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+如果需要部署到 GitHub pages，这个命令会先构建静态页面，然后推送到 `gh-pages` 分支。
 
-### 持续集成
+### 贡献者
 
-Some common defaults for linting/formatting have been set for you. If you integrate your project with an open source Continuous Integration system (e.g. Travis CI, CircleCI), you may check for issues using the following command.
+感谢所有的贡献者们🎉
 
-```
-$ yarn ci
-```
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
