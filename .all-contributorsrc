@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "justjavac",
+      "name": "迷渡",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/359395?v=4",
+      "profile": "https://twitter.com/justjavac",
+      "contributions": [
+        "translation"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "recoil",
+  "projectOwner": "justjavac",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
