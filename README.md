@@ -1,12 +1,8 @@
 # Recoil 中文文档
 
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#贡献者)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
 
 当前翻译版本 [e377043](https://github.com/facebookexperimental/Recoil/commit/e37704379e13c11c4ed4afed8da553157e3aae96)(2020-05-25T10:09:16Z)
 
