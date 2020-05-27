@@ -43,20 +43,20 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Learn',
+          title: '学习',
           items: [
             {
-              label: 'Getting Started',
+              label: '快速入门',
               to: 'docs/introduction/getting-started',
             },
             {
-              label: 'Core Concepts',
+              label: '核心概念',
               to: 'docs/introduction/core-concepts',
             },
           ],
         },
         {
-          title: 'Community',
+          title: '社区',
           items: [
             // {
             //   label: 'Stack Overflow',
@@ -73,7 +73,7 @@ module.exports = {
           ],
         },
         {
-          title: 'More',
+          title: '更多',
           items: [
             // {
             //   label: 'Blog',
@@ -86,17 +86,17 @@ module.exports = {
           ],
         },
         {
-          title: 'Legal',
+          title: '法律条款',
           // Please do not remove the privacy and terms, it's a legal requirement.
           items: [
             {
-              label: 'Privacy',
+              label: '隐私',
               href: 'https://opensource.facebook.com/legal/privacy/',
               target: '_blank',
               rel: 'noreferrer noopener',
             },
             {
-              label: 'Terms',
+              label: '条款',
               href: 'https://opensource.facebook.com/legal/terms/',
               target: '_blank',
               rel: 'noreferrer noopener',
@@ -119,11 +119,11 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/justjavac/recoil/tree/master/docs',
+          editUrl: 'https://github.com/justjavac/recoil/tree/master',
         },
         blog: {
           showReadingTime: true,
-          editUrl: 'https://github.com/justjavac/recoil/tree/master/docs/blog/',
+          editUrl: 'https://github.com/justjavac/recoil/tree/master/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

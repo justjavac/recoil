@@ -1,10 +1,12 @@
 ---
-title: Core Concepts
+title: 核心概念
 ---
 
-## Overview
+## 概述 {#overview}
 
 Recoil lets you create a data-flow graph that flows from _atoms_ (shared state) through _selectors_ (pure functions) and down into your React components. Atoms are units of state that components can subscribe to. Selectors transform this state either synchronously or asynchronously.
+
+Recoil 允许您创建一个数据流图，该图形从原子（共享状态）流经选择器（纯函数）并向入 React 组件。原子是组件可以订阅的状态单位。选择器以同步或异步方式转换此状态。
 
 ## Atoms
 

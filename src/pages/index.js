@@ -80,7 +80,7 @@ function Home() {
                 styles.getStarted,
               )}
               to={useBaseUrl('docs/introduction/getting-started')}>
-              Get Started
+              快速入门
             </Link>
           </div>
         </div>

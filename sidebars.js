@@ -9,20 +9,20 @@
 
 module.exports = {
   someSidebar: {
-    Introduction: [
+    介绍: [
       'introduction/motivation',
       'introduction/core-concepts',
       'introduction/installation',
       'introduction/getting-started',
     ],
-    'Basic Tutorial': [
+    基础: [
       'basic-tutorial/intro',
       'basic-tutorial/atoms',
       'basic-tutorial/selectors',
       // 'basic-tutorial/demo',
       // 'basic-tutorial/performance',
     ],
-    Guides: [
+    指南: [
       //   {
       //     'Migrating to Recoil': [
       //       'guides/migrating/from-react-state',
@@ -39,7 +39,7 @@ module.exports = {
       //   'guides/code-splitting',
     ],
 
-    'API Reference': [
+    'API 参考': [
       {
         Core: [
           'api-reference/core/RecoilRoot',
