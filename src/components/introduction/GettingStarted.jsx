@@ -8,12 +8,12 @@ import {
 } from 'recoil';
 
 const textState = atom({
-  key: 'textState', // unique ID (with respect to other atoms/selectors)
-  default: '', // default value (aka initial value)
+  key: 'textState', // 唯一标识
+  default: '', // 默认值
 });
 
 const charCountState = selector({
-  key: 'charCountState', // unique ID (with respect to other atoms/selectors)
+  key: 'charCountState', // 唯一标识
   get: ({get}) => {
     const text = get(textState);
 
@@ -41,7 +41,7 @@ function CharacterCounter() {
 function CharacterCount() {
   const count = useRecoilValue(charCountState);
 
-  return <>Character Count: {count}</>;
+  return <>输入长度: {count}</>;
 }
 
 function TextInput() {
@@ -55,7 +55,7 @@ function TextInput() {
     <div>
       <input type="text" value={text} onChange={onChange} />
       <br />
-      Echo: {text}
+      输入文本: {text}
     </div>
   );
 }
