@@ -46,6 +46,7 @@ $ GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
 <table>
   <tr>
     <td align="center"><a href="https://github.com/justjavac" target="_blank"><img src="https://avatars1.githubusercontent.com/u/359395?v=4" width="100px;" alt=""/><br /><b>迷渡(@justjavac)</b></a></td>
+    <td align="center"><a href="https://github.com/bayunjiang" target="_blank"><img src="https://avatars3.githubusercontent.com/u/19381311?v=4" width="100px;" alt=""/><br /><b>八云酱(@bayunjiang)</b></a></td>
   </tr>
 </table>
 
