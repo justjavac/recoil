@@ -4,13 +4,13 @@ title: 核心概念
 
 ## 概述
 
-Recoil lets you create a data-flow graph that flows from _atoms_ (shared state) through _selectors_ (pure functions) and down into your React components. Atoms are units of state that components can subscribe to. Selectors transform this state either synchronously or asynchronously.
+Recoil 允许你使用 _Selector_ (纯方法)创建一个从 _Atom_ (共享状态)下沉至组件的数据流转图谱。Atoms 表示组件可以订阅的最小状态单元。Selectors 可以同步或者异步更新。
 
 ## Atoms
 
-Atoms are units of state. They're updateable and subscribable: when an atom is updated, each subscribed component is re-rendered with the new value. They can be created at runtime, too. Atoms can be used in place of React local component state. If the same atom is used from multiple components, all those components share their state.
+Atom 是最小状态单元。它们可以被订阅和更新：当它更新时，所有订阅它的组件都会使用新数据重绘；它可以在运行时创建；它也可以在局部状态使用；同一个 Atom 可以被多个组件使用与共享。
 
-Atoms are created using the `atom` function:
+使用 `atom` 方法创建 Atom 实例。
 
 ```javascript
 const fontSizeState = atom({
@@ -19,9 +19,9 @@ const fontSizeState = atom({
 });
 ```
 
-Atoms need a unique key, which is used for debugging, persistence, and for certain advanced APIs that let you see a map of all atoms. It is an error for two atoms to have the same key, so make sure they're globally unique. Like React component state, they also have a default value.
+Atom 需要一个唯一标识用于调试、数据持久化和状态查询的高阶方法。必须保证这个唯一标识全局唯一否则将会报错，创建时可以设置默认值。
 
-To read and write an atom from a component, we use a hook called `useRecoilState`. It's just like React's `useState`, but now the state can be shared between components:
+在组件中使用 Hook 方法 `useRecoilState` 对 Atom 进行读写操作，参考 `React.useState`，区别在于这个状态可以在组件之间共享。
 
 ```jsx
 function FontButton() {
@@ -34,7 +34,7 @@ function FontButton() {
 }
 ```
 
-Clicking on the button will increase the font size of the button by one. But now some other component can also use the same font size:
+点击按钮会依次增加按钮字号，其他组件也会使用相同的字号：
 
 ```jsx
 function Text() {
@@ -45,13 +45,13 @@ function Text() {
 
 ## Selectors
 
-A **selector** is a pure function that accepts atoms or other selectors as input. When these upstream atoms or selectors are updated, the selector function will be re-evaluated. Components can subscribe to selectors just like atoms, and will then be re-rendered when the selectors change.
+**Selector** 是一个入参为 Atom 或者其他 Selector 的纯函数。当它的上游 Atom 或者 Selector 更新时，它会进行重新计算。Selector 可以像 Atom 一样被组件订阅，当它更新时，订阅它的组件将会重新渲染。
 
-Selectors are used to calculate derived data that is based on state. This lets us avoid redundant state, usually obviating the need for reducers to keep state in sync and valid. Instead, a minimal set of state is stored in atoms, while everything else is efficiently computed as a function of that minimal state. Since selectors keep track of what components need them and what state they depend on, they make this functional approach more efficient.
+Selector 通常用于计算一些基于原始状态的派生数据。因为不需要使用 reducer 来保证数据的一致性和有效性，所以可以避免冗余数据。我们使用 Atom 保存一点原始状态，其他数据都是在其基础上计算得来的。因为 Selector 会追踪使用它们的组件以及它们依赖的数据状态，所以函数式编程会比较高效。
 
-From the point of view of components, selectors and atoms have the same interface and can therefore be substituted for one another.
+因为 Seletors 和 Atoms 给组件提供相同的方法，所以它们可以相互替代。
 
-Selectors are defined using the `selector` function:
+使用 `selector` 方法创建 Selector 实例。
 
 ```javascript
 const fontSizeLabelState = selector({
@@ -65,11 +65,11 @@ const fontSizeLabelState = selector({
 });
 ```
 
-The `get` property is the function that is to be computed. It can access the value of atoms and other selectors using the `get` argument passed to it. Whenever it accesses another atom or selector, a dependency relationship is created such that updating the other atom or selector will cause this one to be recomputed.
+`get` 属性是一个计算函数，它可以使用入参 `get` 字段来访问输入的 Atom 和 Selector。当它访问其他 Atom 和 Selector 时，这层依赖关系会保证更新状态的同步。
 
-In this `fontSizeLabelState` example, the selector has one dependency: the `fontSizeState` atom. Conceptually, the `fontSizeLabelState` selector behaves like a pure function that takes a `fontSizeState` as input and returns a formatted font size label as output.
+参考上述 `fontSizeLabelState` 示例，它依赖于 `fontSizeState`。根据之前的描述，`fontSizeLabelState` 使用 `fontSizeState` 作为入参，并返回格式化之后的字号文本。
 
-Selectors can be read using `useRecoilValue()`, which takes an atom or selector as an argument and returns the corresponding value. We don't use the `useRecoilState()` as the `fontSizeLabelState` selector is not writeable (see the [selector API reference](/docs/api-reference/core/selector) for more information on writeable selectors):
+我们可以通过在 `useRecoilValue()` 方法中输入 Atom 或者 Selector 来获取对应的数据。这里不用 `useRecoilState()` 是因为 `fontSizeLabelState` 是一个不可写 Selector，更多细节参考 [Selector](/docs/api-reference/core/selector)。
 
 ```jsx
 function FontButton() {
@@ -78,14 +78,14 @@ function FontButton() {
 
   return (
     <>
-      <div>Current font size: ${fontSizeLabel}</div>
+      <div>当前字号: ${fontSizeLabel}</div>
 
       <button onClick={() => setFontSize(fontSize + 1)} style={{fontSize}}>
-        Click to Enlarge
+        增大字号
       </button>
     </>
   );
 }
 ```
 
-Clicking on the button now does two things: it increases the font size of the button while also updating the font size label to reflect the current font size.
+点击按钮可以看到按钮和文本的字号同时在更新。
