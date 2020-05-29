@@ -4,7 +4,7 @@ title: 核心概念
 
 ## 概述
 
-Recoil 允许你使用 _Selector_ (纯方法)创建一个从 _Atom_ (共享状态)下沉至组件的数据流转图谱。Atoms 表示组件可以订阅的最小状态单元。Selectors 可以同步或者异步更新。
+Recoil 允许你使用 _Selector_ (纯函数)创建一个从 _Atom_ (共享状态)下沉至组件的数据流转图谱。Atom 表示组件可以订阅的最小状态单元。Selector 可以同步或者异步更新。
 
 ## Atoms
 
@@ -28,7 +28,7 @@ function FontButton() {
   const [fontSize, setFontSize] = useRecoilState(fontSizeState);
   return (
     <button onClick={() => setFontSize((size) => size + 1)} style={{fontSize}}>
-      Click to Enlarge
+      增大字号
     </button>
   );
 }
@@ -39,7 +39,7 @@ function FontButton() {
 ```jsx
 function Text() {
   const [fontSize, setFontSize] = useRecoilState(fontSizeState);
-  return <p style={{fontSize}}>This text will increase in size too.</p>;
+  return <p style={{fontSize}}>这里的字号会同步增大</p>;
 }
 ```
 
@@ -49,7 +49,7 @@ function Text() {
 
 Selector 通常用于计算一些基于原始状态的派生数据。因为不需要使用 reducer 来保证数据的一致性和有效性，所以可以避免冗余数据。我们使用 Atom 保存一点原始状态，其他数据都是在其基础上计算得来的。因为 Selector 会追踪使用它们的组件以及它们依赖的数据状态，所以函数式编程会比较高效。
 
-因为 Seletors 和 Atoms 给组件提供相同的方法，所以它们可以相互替代。
+因为 Seletor 和 Atom 给组件提供相同的方法，所以它们可以相互替代。
 
 使用 `selector` 方法创建 Selector 实例。
 
