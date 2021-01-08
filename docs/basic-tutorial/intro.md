@@ -1,15 +1,15 @@
 ---
-title: Intro
+title: 简介
 ---
 
-This section assumes you have installed Recoil and React. See the [Getting Started](/docs/introduction/getting-started) page for how to get started with Recoil and React from scratch. Components in the following sections are assumed to have a `<RecoilRoot />` in the parent tree.
+这一部分假设你已经安装了 Recoil 和 React。想要了解如何从零开始 Recoil 和 React，请查看[起步](/docs/introduction/getting-started)页。接下来部分的组件假定在父树中已经有`<RecoilRoot />`。
 
-In this tutorial, we'll be building a simple todo-list application. Our app will be able to do the following:
+在这个教程中，我们将会构建一个简单的待办事项应用程序，我们的应用将有以下功能：
 
-- Add todo items
-- Edit todo items
-- Delete todo items
-- Filter todo items
-- Display useful stats
+- 增加待办事项
+- 编辑待办事项
+- 删除待办事项
+- 过滤待办事项
+- 显示有用的统计数据
 
-Along the way, we'll cover atoms, selectors, atom families, and the hooks exposed by the Recoil API. We'll also cover optimization
+同时，我们将介绍 Recoil API 的 atoms, selectors, atom families, 和 hooks。我们还将介绍优化。

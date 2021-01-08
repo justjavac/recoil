@@ -2,9 +2,9 @@
 title: Atoms
 ---
 
-Atoms contain the source of truth for our application state. In our todo-list, the source of truth will be an array of objects, with each object representing a todo item.
+Atoms 包含我们应用状态的真实来源。在我们的待办事项列表中，真实来源将是一个对象数组，每个对象表示一个待办事项。
 
-We'll call our list atom `todoListState` and create it using the `atom()` function:
+我们将称我们的 atom 列表为`todoListState`，并使用`atom()`函数创建它：
 
 ```javascript
 const todoListState = atom({
@@ -13,7 +13,7 @@ const todoListState = atom({
 });
 ```
 
-We give our atom a unique `key` and set the `default` value to an empty array. To read the contents of this atom, we can use the `useRecoilValue()` hook in our `TodoList` component:
+我们为 atom 提供一个唯一的`key`，并设置`default`值为空数组。要读取此 atom 的内容，我们可以在`TodoList`组件中使用`useRecoilValue()`hook：
 
 ```jsx
 function TodoList() {
@@ -33,9 +33,9 @@ function TodoList() {
 }
 ```
 
-The commented-out components will be implemented in the sections that follow.
+注释掉的组件将在以下各部分实现。
 
-To create new todo items, we need to access a setter function that will update the contents of the `todoListState`. We can use the `useSetRecoilState()` hook to get a setter function in our `TodoItemCreator` component:
+要创建新的待办事项，我们需要访问一个 setter 函数，该函数将更新`todoListState`的内容。我们可以使用`useSetRecoilState()` hook 在我们的`TodoItemCreator`组件中获取 setter 函数：
 
 ```jsx
 function TodoItemCreator() {
@@ -66,16 +66,16 @@ function TodoItemCreator() {
   );
 }
 
-// utility for creating unique Id
+// 用于创建唯一 ID 的工具
 let id = 0;
 function getId() {
   return id++;
 }
 ```
 
-Notice we use the **updater** form of the setter function so that we can create a new todo list based on the old todo list.
+请注意，我们使用 setter 函数的 **updater** 形式，以便我们可以基于旧的待办事项列表创建新的待办事项列表。
 
-The `TodoItem` component will display the value of the todo item while allowing you to change its text and delete the item. We use `useRecoilState()` to read `todoListState` and to get a setter function that we use to update the item text, mark it as completed, and delete it:
+`TodoItem`组件将显示待办事项的值，同时允许您更改其文本并删除项目。我们使用`useRecoilState()`来读取`todoListState`，并获取一个 setter 函数，用于更新项目文本、将其标记为已完成并删除它：
 
 ```jsx
 function TodoItem({item}) {
@@ -128,4 +128,4 @@ function removeItemAtIndex(arr, index) {
 }
 ```
 
-And with that we've got a fully functional todo list! In the next section we'll see how we can use selectors to take our list to the next level.
+有了它，我们有了一个功能齐全的待办事项列表！下一节我们将介绍如何使用 selectors 将列表更新到一个新的水平。
