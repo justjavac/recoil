@@ -42,7 +42,7 @@ const filteredTodoListState = selector({
 
 `filteredTodoListState`内部跟踪两个依赖项：`todoListFilterState`和`todoListState`，以便如果其中任何一个依赖项发生更改，它将重新运行（re-runs）。
 
-> 从组件的角度来看，可以使用用于读取 atom 的相同 hook 来读取 selector。但是，需要注意的是，某些 hook 仅适用于 **可写状态**（即`useRecoilState()`）。所有 atom 都是可写状态，但只有某些selector 被视为可写状态（同时具有`get`和`set`属性的 selector）。有关本主题的详细信息，请参阅[核心概念](/docs/introduction/core-concepts)页面。
+> 从组件的角度来看，可以使用用于读取 atom 的相同 hook 来读取 selector。但是，需要注意的是，某些 hook 仅适用于 **可写状态**（即`useRecoilState()`）。所有 atom 都是可写状态，但只有某些 selector 被视为可写状态（同时具有`get`和`set`属性的 selector）。有关本主题的详细信息，请参阅[核心概念](/docs/introduction/core-concepts)页面。
 
 显示我们筛选的 todoList 非常简单，只需更改`TodoList`组件中的一行：
 
