@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://recoil.js.cn/blog</id>
+    <title>Recoil 中文文档 Blog</title>
+    <updated>2015-10-25T23:29:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://recoil.js.cn/blog"/>
+    <subtitle>Recoil 中文文档 Blog</subtitle>
+    <icon>https://recoil.js.cn/img/favicon.ico</icon>
+</feed>
