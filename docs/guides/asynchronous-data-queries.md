@@ -161,7 +161,7 @@ const currentUserIDState = atom({
 
 const userInfoQuery = selectorFamily({
   key: 'UserInfoQuery',
-  get: userID => async ({get}) => {
+  get: (userID) => async ({get}) => {
     const response = await myDBQuery({userID});
     if (response.error) {
       throw response.error;
@@ -196,11 +196,11 @@ function CurrentUserInfo() {
     <div>
       <h1>{currentUser.name}</h1>
       <ul>
-        {friends.map(friend =>
+        {friends.map((friend) => (
           <li key={friend.id} onClick={() => setCurrentUserID(friend.id)}>
             {friend.name}
           </li>
-        )}
+        ))}
       </ul>
     </div>
   );
